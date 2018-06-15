@@ -12,12 +12,11 @@ public class BasicGame extends Game{
 	private int width;
 	private int height;
 	public static final int DEFAULT_SIZE = 50;
-	private int startSize;
+	private int score = 0;
 	public BasicGame(Snake snake, int width, int height) {
 		food.setX(((int)((Math.random() * width)) * DEFAULT_SIZE));
 		food.setY(((int)((Math.random() * height)) * DEFAULT_SIZE));
 		mySnake = snake;
-		startSize = mySnake.getSize();
 		this.width = width;
 		this.height = height;
 		food.setImage(new Image("images/rcd.jpeg"));
@@ -30,6 +29,7 @@ public class BasicGame extends Game{
 	public String update() {
 		boolean eaten = mySnake.update(new Point((int)(food.getX()), (int)(food.getY())));
 		if(eaten) {
+			score++;
 			generateFood();
 		}
 		if(mySnake.upgrade()) {
@@ -56,7 +56,7 @@ public class BasicGame extends Game{
 	}
 	@Override
 	public int getScore() {
-		return mySnake.getSize() - startSize;
+		return score;
 	}
 
 }

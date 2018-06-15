@@ -7,7 +7,7 @@ Current Snakes
 
 Current Games
 ===
-* Basic game - Game ends upon intersection with side or self. Score is snake growth (might change)
+* Basic game - Game ends upon intersection with side or self. Score is food eaten
 
 
 Todo
@@ -17,6 +17,10 @@ Todo
 * Let user choose size of game
 * Let user chose game and snake type
 
+Updates
+===
+* Update 1.0
+	* Basic game goes by food eaten now rather than snake growth (to allow more flexibility for snakes)
 
 
 

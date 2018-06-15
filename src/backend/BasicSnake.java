@@ -81,6 +81,7 @@ public class BasicSnake extends Snake {
 			break;
 		default:
 			System.out.print("wtf");
+			break;
 		}
 		return point;
 	}
