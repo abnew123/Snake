@@ -22,7 +22,7 @@ public class Engine extends Group{
 		mySnake = mySnakes[0];
 		getChildren().add(myGame);
 	}
-	public void startScreen() {};
+//	public void startScreen() {};
 	public void endScreen(Group group, Scene scene) {
 		group.getChildren().clear();
 		Text endScreen = new Text("your score was: " + myGame.getScore());
