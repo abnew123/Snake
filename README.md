@@ -10,6 +10,7 @@ Current Games
 ===
 * Basic game - Game ends upon intersection with side or self. Score is food eaten. Speeds up by food eaten.
 * Time game - Game ends upon intersection with side or self. Score is time alive. Speeds up by time alive.
+* Poison game - Game ends upon intersection with side, self, or poison block. Score is number of poison block spawns. Poison blocks spawn periodically.
 
 
 Todo
@@ -18,6 +19,7 @@ Todo
 * Add more games
 * Let user choose size of game
 * Let user chose game and snake type
+* Let user choose difficulty
 
 Version control
 ===
@@ -30,6 +32,8 @@ Version control
 * Update 1.2
 	* New game: time game- score and upgrade based on time
 	* Snakes no longer decide speed up time. Games now do
+* Update 1.3
+	* New Game : poison game - poison blocks spawn and must be avoided. score based on number of spawns
 
 
 
