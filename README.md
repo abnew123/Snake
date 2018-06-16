@@ -37,6 +37,8 @@ Version control
 	* New Game: poison game - poison blocks spawn and must be avoided. score based on number of spawns
 * Update 1.4
 	* New Snake: time snake - grows every certain amount of update loops
+* Update 1.5
+	* New feature: direction inversion - up means down, left means right, etc...
 
 
 
