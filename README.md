@@ -4,10 +4,12 @@
 Current Snakes
 ===
 * Basic snake - moves normally, grows by 1 upon eating food
+* Unchangeable snake - move normally, does not grow upon eating food
 
 Current Games
 ===
-* Basic game - Game ends upon intersection with side or self. Score is food eaten
+* Basic game - Game ends upon intersection with side or self. Score is food eaten. Speeds up by food eaten.
+* Time game - Game ends upon intersection with side or self. Score is time alive. Speeds up by time alive.
 
 
 Todo
@@ -17,12 +19,17 @@ Todo
 * Let user choose size of game
 * Let user chose game and snake type
 
-Updates
+Version control
 ===
+* Version 0
+	* Initial release (Basic game and Basic Snake)
 * Update 1.0
 	* Basic game goes by food eaten now rather than snake growth (to allow more flexibility for snakes)
 * Update 1.1
 	* New snake: unchangeable snake- moves normally, does not grow upon eating food
+* Update 1.2
+	* New game: time game- score and upgrade based on time
+	* Snakes no longer decide speed up time. Games now do
 
 
 
