@@ -1,6 +1,6 @@
 package main;
 
-import backend.TimeGame;
+import backend.PoisonGame;
 import backend.UnchangeableSnake;
 import javafx.animation.Animation.Status;
 import javafx.animation.KeyFrame;
@@ -61,7 +61,7 @@ public class Launch extends Application{
 	private void initialize(Stage stage) {
 		myGroup = new Group();
 		myScene = new Scene(myGroup, SIZE, SIZE, BACKGROUND);
-		myEngine = new Engine(new TimeGame(new UnchangeableSnake(STARTING_SIZE), INITIAL_WIDTH, INITIAL_HEIGHT));
+		myEngine = new Engine(new PoisonGame(new UnchangeableSnake(STARTING_SIZE), INITIAL_WIDTH, INITIAL_HEIGHT));
 		myGroup.getChildren().add(myEngine);
         stage.setScene(myScene);
         stage.show();
