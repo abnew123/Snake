@@ -21,6 +21,8 @@ Updates
 ===
 * Update 1.0
 	* Basic game goes by food eaten now rather than snake growth (to allow more flexibility for snakes)
+* Update 1.1
+	* New snake: unchangeable snake- moves normally, does not grow upon eating food
 
 
 
