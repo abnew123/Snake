@@ -12,6 +12,8 @@ public class BasicGame extends Game{
 	private int width;
 	private int height;
 	public static final int DEFAULT_SIZE = 50;
+	public static final int AMOUNT_NEEDED_FOR_UPGRADE = 1;
+	private int toNextUpgrade = AMOUNT_NEEDED_FOR_UPGRADE;
 	private int score = 0;
 	public BasicGame(Snake snake, int width, int height) {
 		food.setX(((int)((Math.random() * width)) * DEFAULT_SIZE));
@@ -27,12 +29,15 @@ public class BasicGame extends Game{
 	}
 	@Override
 	public String update() {
+		
 		boolean eaten = mySnake.update(new Point((int)(food.getX()), (int)(food.getY())));
 		if(eaten) {
+			toNextUpgrade--;
 			score++;
 			generateFood();
 		}
-		if(mySnake.upgrade()) {
+		if(toNextUpgrade == 0) {
+			toNextUpgrade = AMOUNT_NEEDED_FOR_UPGRADE;
 			return "UPGRADE";
 		}
 		return "GOING";

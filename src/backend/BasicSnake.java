@@ -10,25 +10,18 @@ import javafx.scene.image.ImageView;
 public class BasicSnake extends Snake {
 	private ImageView image = new ImageView();
 	private List<Point> bodyParts;
-	private boolean eaten;
 	private int direction;
-	public static final int AMOUNT_NEEDED_FOR_UPGRADE = 1;
-	private int toNextUpgrade = AMOUNT_NEEDED_FOR_UPGRADE;
 	public static final int DEFAULT_SIZE = 50;
 	public BasicSnake(int size) {
 		bodyParts = new ArrayList<Point>();
 		image.setImage(new Image("images/brick2.gif"));
-		eaten = false;
 		generate(size);
 		direction = 0;
 		setUpGroup();
 		
 	}
 	public boolean update(Point foodLocation) {
-		eaten = checkIntersection(foodLocation);
-		if(eaten) {
-			eaten = false;
-			toNextUpgrade--;
+		if(checkIntersection(foodLocation)) {
 			bodyParts.add(0, bodyParts.get(0));
 			updatePoints();
 			updateGroup();
@@ -116,12 +109,5 @@ public class BasicSnake extends Snake {
 		}
 		return dead;
 	}
-	
-	public boolean upgrade() {
-		if(toNextUpgrade == 0) {
-			toNextUpgrade = AMOUNT_NEEDED_FOR_UPGRADE;
-			return true;
-		}
-		return false;
-	}
+
 }

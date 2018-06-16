@@ -10,5 +10,4 @@ public abstract class Snake extends Group{
 	public abstract boolean checkIntersection(Point location);
 	public abstract boolean outOfBounds(int width, int height);
 	public abstract boolean alertDead();
-	public abstract boolean upgrade();
 }
