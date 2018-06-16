@@ -2,6 +2,7 @@ package main;
 
 import backend.BasicGame;
 import backend.BasicSnake;
+import backend.UnchangeableSnake;
 import javafx.animation.Animation.Status;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -61,7 +62,7 @@ public class Launch extends Application{
 	private void initialize(Stage stage) {
 		myGroup = new Group();
 		myScene = new Scene(myGroup, SIZE, SIZE, BACKGROUND);
-		myEngine = new Engine(new BasicGame(new BasicSnake(STARTING_SIZE), INITIAL_WIDTH, INITIAL_HEIGHT));
+		myEngine = new Engine(new BasicGame(new UnchangeableSnake(STARTING_SIZE), INITIAL_WIDTH, INITIAL_HEIGHT));
 		myGroup.getChildren().add(myEngine);
         stage.setScene(myScene);
         stage.show();

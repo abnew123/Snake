@@ -25,7 +25,7 @@ public class Engine extends Group{
 //	public void startScreen() {};
 	public void endScreen(Group group, Scene scene) {
 		group.getChildren().clear();
-		Text endScreen = new Text("your score was: " + myGame.getScore());
+		Text endScreen = new Text("your score is: " + myGame.getScore());
 		endScreen.setX(scene.getWidth() / 2 - endScreen.getBoundsInLocal().getWidth()/2);
 		endScreen.setY(scene.getHeight() / 2 - endScreen.getBoundsInLocal().getHeight()/2);
 		group.getChildren().add(endScreen);

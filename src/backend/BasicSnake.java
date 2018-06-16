@@ -124,8 +124,4 @@ public class BasicSnake extends Snake {
 		}
 		return false;
 	}
-	@Override
-	public int getSize() {
-		return bodyParts.size();
-	}
 }
