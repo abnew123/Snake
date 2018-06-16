@@ -4,7 +4,8 @@
 Current Snakes
 ===
 * Basic snake - moves normally, grows by 1 upon eating food
-* Unchangeable snake - move normally, does not grow upon eating food
+* Unchangeable snake - moves normally, does not grow upon eating food
+* Time snake - moves normally, grows periodically
 
 Current Games
 ===
@@ -33,7 +34,9 @@ Version control
 	* New game: time game- score and upgrade based on time
 	* Snakes no longer decide speed up time. Games now do
 * Update 1.3
-	* New Game : poison game - poison blocks spawn and must be avoided. score based on number of spawns
+	* New Game: poison game - poison blocks spawn and must be avoided. score based on number of spawns
+* Update 1.4
+	* New Snake: time snake - grows every certain amount of update loops
 
 
 
