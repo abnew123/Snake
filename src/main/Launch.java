@@ -22,6 +22,7 @@ public class Launch extends Application{
     public static final int INITIAL_WIDTH = SIZE/50;
 	public static final int INITIAL_HEIGHT= SIZE/50;
 	public static final int STARTING_SIZE = 4;
+	public static final boolean INVERTED = true;
 	private Stage myStage;
     private Scene myScene;
     private Group myGroup;
@@ -35,7 +36,6 @@ public class Launch extends Application{
 	public void start(Stage stage) {
 		myStage = stage;
 		initialize(myStage);
-		
 	}
 	
 	/**
@@ -52,7 +52,6 @@ public class Launch extends Application{
 			initialize(myStage);
 		}
 		if(status.equals("UPGRADE")) {
-			System.out.println("hi");
 			frames++;
 			updateTime();
 		}
@@ -61,7 +60,7 @@ public class Launch extends Application{
 	private void initialize(Stage stage) {
 		myGroup = new Group();
 		myScene = new Scene(myGroup, SIZE, SIZE, BACKGROUND);
-		myEngine = new Engine(new PoisonGame(new TimeSnake(STARTING_SIZE), INITIAL_WIDTH, INITIAL_HEIGHT));
+		myEngine = new Engine(new PoisonGame(new TimeSnake(STARTING_SIZE), INITIAL_WIDTH, INITIAL_HEIGHT), INVERTED);
 		myGroup.getChildren().add(myEngine);
         stage.setScene(myScene);
         stage.show();

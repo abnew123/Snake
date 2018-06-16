@@ -16,11 +16,15 @@ public class Engine extends Group{
 	private Game myGame;
 	private Snake[] mySnakes;
 	private Snake mySnake;
-	public Engine(Game game) {
+	public static final int[] NONINVERTED_DIRECTIONS = new int[] {0,2,3,1};
+	public static final int[] INVERTED_DIRECTIONS = new int[] {2,0,1,3};
+	private int[] directions;
+	public Engine(Game game, boolean inversion) {
 		myGame = game;
 		mySnakes = game.getSnakes();
 		mySnake = mySnakes[0];
 		getChildren().add(myGame);
+		directions = inversion?INVERTED_DIRECTIONS: NONINVERTED_DIRECTIONS;
 	}
 //	public void startScreen() {};
 	public void endScreen(Group group, Scene scene) {
@@ -34,16 +38,16 @@ public class Engine extends Group{
 	public void handleKeyPress(KeyCode code) {
 		switch(code) {
 			case RIGHT: 
-				mySnake.setDirection(0);
+				mySnake.setDirection(directions[0]);
 				break;
 			case LEFT:
-				mySnake.setDirection(2);
+				mySnake.setDirection(directions[1]);
 				break;
 			case UP: 
-				mySnake.setDirection(3);
+				mySnake.setDirection(directions[2]);
 				break;
 			case DOWN:
-				mySnake.setDirection(1);
+				mySnake.setDirection(directions[3]);
 				break;
 			case ENTER:
 				if(!gameStarted) {
