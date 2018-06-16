@@ -19,7 +19,7 @@ Todo
 * Add more snakes
 * Add more games
 * Let user choose size of game
-* Let user chose game and snake type
+* Let user chose game and snake type and inversion
 * Let user choose difficulty
 
 Version control
